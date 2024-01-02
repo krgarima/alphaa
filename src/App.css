@@ -92,11 +92,6 @@ a:disabled {
     0px 0px 1px rgba(222, 235, 255, 0.31);
   --shadow-dark-500: 0px 18px 28px rgba(222, 235, 255, 0.15),
     0px 0px 1px rgba(222, 235, 255, 0.31);
-
-  /* --txt-lg: 1.312rem;
-  --txt-rg: 1rem;
-  --txt-sm: 0.75rem;
-  --txt-xs: 0.562rem; */
 }
 
 .btnSecondary {
