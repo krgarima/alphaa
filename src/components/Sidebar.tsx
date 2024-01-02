@@ -1,5 +1,6 @@
 import "../styles/sidebar.css";
 // import comparsionChartsData from "../components/Charts/data/comparisonChartData.json";
+// import differenceChartData from "../components/Charts/data/differenceChartData.json";
 // import { calcSum } from "../Helpers";
 
 const Sidebar = () => {
