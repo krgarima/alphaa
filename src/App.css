@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+a:disabled {
+  color: inherit;
+}
+
+:root {
+  /************ Colors ************/
+
+  --primary-color-m10: #f4f9ff;
+  --primary-color-0: #deebff;
+  --primary-color-20: #b3d4ff;
+  --primary-color-40: #2684ff;
+  --primary-color-60: #0065ff;
+  --primary-color-80: #0052cc;
+  --primary-color-100: #0747a6;
+
+  --secondary-color-0: #dbd5fc;
+  --secondary-color-20: #c4b9ff;
+  --secondary-color-40: #7b67e9;
+  --secondary-color-60: #5f4ad6;
+  --secondary-color-80: #3f2da8;
+  --secondary-color-100: #2b1b87;
+
+  --red-color-0: #ffbdad;
+  --red-color-20: #ff8f73;
+  --red-color-40: #ff7452;
+  --red-color-60: #ff5630;
+  --red-color-80: #de350b;
+  --red-color-100: #bf2600;
+
+  --green-color-0: #c6ffe1;
+  --green-color-20: #79f2c0;
+  --green-color-40: #57d9a3;
+  --green-color-60: #22c55d;
+  --green-color-80: #00875a;
+  --green-color-100: #006644;
+
+  --teal-color-0: #bdf6ff;
+  --teal-color-20: #79e2f2;
+  --teal-color-40: #00c7e6;
+  --teal-color-60: #00b8d9;
+  --teal-color-80: #00a3bf;
+  --teal-color-100: #008da6;
+
+  --yellow-color-0: #fcfce9;
+  --yellow-color-20: #f5f5bc;
+  --yellow-color-40: #efef8f;
+  --yellow-color-60: #bfbf40;
+  --yellow-color-80: #959504;
+  --yellow-color-100: #4d4d00;
+
+  --neutral-color-m10: #e0e6f3;
+  --neutral-color-0: #fafafa;
+  --neutral-color-10: #f1f1f1;
+  --neutral-color-20: #d0d0d0;
+  --neutral-color-40: #b0b0b0;
+  --neutral-color-60: #808080;
+  --neutral-color-80: #505050;
+  --neutral-color-100: #303030;
+
+  /************ Box Shadow - Light mode ************/
+
+  --shadow-light-100: 0px 1px 1px rgba(9, 30, 66, 0.25),
+    0px 0px 1px rgba(9, 30, 66, 0.31);
+  --shadow-light-200: 0px 3px 5px rgba(9, 30, 66, 0.2),
+    0px 0px 1px rgba(9, 30, 66, 0.31);
+  --shadow-light-300: 0px 8px 12px rgba(9, 30, 66, 0.15),
+    0px 0px 1px rgba(9, 30, 66, 0.31);
+  --shadow-light-400: 0px 10px 18px rgba(9, 30, 66, 0.15),
+    0px 0px 1px rgba(9, 30, 66, 0.31);
+  --shadow-light-500: 0px 18px 28px rgba(9, 30, 66, 0.15),
+    0px 0px 1px rgba(9, 30, 66, 0.31);
+
+  /************ Box Shadow - Dark mode ************/
+
+  --shadow-dark-100: 0px 1px 1px rgba(222, 235, 255, 0.25),
+    0px 0px 1px rgba(222, 235, 255, 0.31);
+  --shadow-dark-200: 0px 3px 5px rgba(222, 235, 255, 0.21),
+    0px 0px 1px rgba(222, 235, 255, 0.31);
+  --shadow-dark-300: 0px 8px 12px rgba(222, 235, 255, 0.15),
+    0px 0px 1px rgba(222, 235, 255, 0.31);
+  --shadow-dark-400: 0px 10px 18px rgba(222, 235, 255, 0.16),
+    0px 0px 1px rgba(222, 235, 255, 0.31);
+  --shadow-dark-500: 0px 18px 28px rgba(222, 235, 255, 0.15),
+    0px 0px 1px rgba(222, 235, 255, 0.31);
+
+  /* --txt-lg: 1.312rem;
+  --txt-rg: 1rem;
+  --txt-sm: 0.75rem;
+  --txt-xs: 0.562rem; */
+}
+
+.btnSecondary {
+  background-color: inherit;
+  border: 0.8px solid var(--neutral-color-20);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btnLink {
+  background-color: inherit;
+  color: var(--primary-color-40);
+  border: none;
+  cursor: pointer;
+}
+
+/* Border radius */
+
+/* Font size */
+
+.br-3 {
+  border-radius: 3px;
+}
+
+/* padding */
+
+.ph-1 {
+  padding: 0 1em;
+}
+
+/* Font weights */
+
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+/* Responsive */
+
+/* // X-Small devices (greater than 36rem) */
+@media (min-width: 36rem) {
+  .App {
+    font-size: 0.7rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* // Small devices (landscape phones, greater than 48rem) */
+@media (min-width: 48rem) {
+  .App {
+    font-size: 0.7rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* // Medium devices (tablets, greater than 62rem) */
+@media (min-width: 62rem) {
+  .App {
+    font-size: 0.8rem;
+  }
+}
+
+/* // Large devices (desktops, greater than 75rem) */
+@media (min-width: 75rem) {
+  .App {
+    font-size: 0.8rem;
+  }
+}
+
+/* // X-Large devices (large desktops, greater than 100rem) */
+@media (min-width: 100rem) {
+  .App {
+    font-size: 0.9rem;
+  }
+}
+
+/* // X-Large devices (large desktops, greater than 120rem) */
+@media (min-width: 120rem) {
+  .App {
+    font-size: 1rem;
+  }
+}
+
+/* // X-Large devices (large desktops, greater than 130rem) */
+@media (min-width: 130rem) {
+  .App {
+    font-size: 1.1rem;
+  }
+}
+
+/* // X-Large devices (large desktops, greater than 140rem) */
+@media (min-width: 140rem) {
+  .App {
+    font-size: 1.2rem;
   }
 }
