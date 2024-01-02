@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Overall",
+    "type": "bar",
+    "color": "#5db5e3",
+    "label": {
+      "show": true,
+      "position": "outside",
+      "color": "#5db5e3",
+      "formatter": "{value}%"
+    },
+    "data": [9.37, 11, 11.9, 12.3, 12.5, 12.9, 13.7, 15.3, 16.6]
+  },
+  {
+    "name": "High Performer",
+    "type": "bar",
+    "color": "#ff9179",
+    "label": {
+      "show": true,
+      "position": "outside",
+      "color": "#ff9179",
+      "formatter": "{value}%"
+    },
+    "data": [8.59, 0, 10.9, 12, 9.27, 20.8, 11.6, 18.1, 16.6]
+  }
+]

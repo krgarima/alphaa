@@ -1,0 +1,21 @@
+.container {
+  height: 100%;
+  flex: auto;
+  padding: 1rem;
+}
+
+.btnContainer {
+  height: 4%;
+  width: 100%;
+  display: flex;
+  column-gap: 2em;
+  margin-top: 1em;
+}
+
+.btnContainer > button {
+  padding: 0px 8px;
+}
+
+.fa-play-circle {
+  transform: rotate(90deg);
+}
