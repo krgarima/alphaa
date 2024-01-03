@@ -9,54 +9,6 @@ const Chart = () => {
     else return "";
   };
 
-  const data = [
-    {
-      department: "Operation",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "Office of CEO",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "Marketing",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "Customer Support",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "Finance",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "HR",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "IT",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "Sales",
-      overall: 0,
-      high_performer: 0,
-    },
-    {
-      department: "Operations",
-      overall: 0,
-      high_performer: 0,
-    },
-  ];
-
   const options = {
     tooltip: {
       trigger: "axis",
