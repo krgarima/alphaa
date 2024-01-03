@@ -2,12 +2,13 @@ import ReactECharts from "echarts-for-react";
 import comparisonChartData from "../Charts/data/comparisonChartData.json";
 
 const Chart = () => {
-  const formatValues = (obj: { value: number }, name: string) => {
-    if (name === "Overall" || name === "High Performer") return `${obj.value}%`;
-    else if (name === "Chart")
-      return `${obj.value > 0 ? "+" : ""}${obj.value.toFixed(2)} pp`;
-    else return "";
-  };
+  const overallData = comparisonChartData.map((item: any) => item["overall"]);
+  const highPerformerData = comparisonChartData.map(
+    (item: any) => item["high_performer"]
+  );
+  const differenceData = comparisonChartData.map(
+    (item: any) => item["overall"] - item["high_performer"]
+  );
 
   const options = {
     tooltip: {
@@ -76,13 +77,53 @@ const Chart = () => {
         },
       },
     ],
-    series: comparisonChartData.map((data) => ({
-      ...data,
-      label: {
-        ...data.label,
-        formatter: (obj: { value: number }) => formatValues(obj, data.name),
+    series: [
+      {
+        name: "Overall",
+        type: "bar",
+        color: "#5db5e3",
+        label: {
+          show: true,
+          position: "outside",
+          color: "#5db5e3",
+          formatter: (obj: { value: number }) => `${obj.value}%`,
+        },
+        data: overallData,
       },
-    })),
+      {
+        name: "High Performer",
+        type: "bar",
+        color: "#ff9179",
+        label: {
+          show: true,
+          position: "outside",
+          color: "#ff9179",
+          formatter: (obj: { value: number }) => `${obj.value}%`,
+        },
+        data: highPerformerData,
+      },
+      {
+        xAxisIndex: 1,
+        yAxisIndex: 1,
+        name: "Chart",
+        type: "bar",
+        itemStyle: {
+          color: (obj: { value: number }) =>
+            obj.value > 0 ? "#59d1c8" : "#ff9179",
+        },
+        label: {
+          show: true,
+          position: "outside",
+          color: "inherit",
+          formatter: (obj: { value: number }) =>
+            `${obj.value > 0 ? "+" : ""}${obj.value.toFixed(2)} pp`,
+        },
+        emphasis: {
+          focus: "series",
+        },
+        data: differenceData,
+      },
+    ],
   };
 
   return <ReactECharts style={{ height: "85%" }} option={options} />;

@@ -1,43 +1,47 @@
 [
   {
-    "name": "Overall",
-    "type": "bar",
-    "color": "#5db5e3",
-    "label": {
-      "show": true,
-      "position": "outside",
-      "color": "#5db5e3",
-      "formatter": "{value}%"
-    },
-    "data": [9.37, 11, 11.9, 12.3, 12.5, 12.9, 13.7, 15.3, 16.6]
+    "department": "Operation",
+    "overall": 9.37,
+    "high_performer": 8.59
   },
   {
-    "name": "High Performer",
-    "type": "bar",
-    "color": "#ff9179",
-    "label": {
-      "show": true,
-      "position": "outside",
-      "color": "#ff9179",
-      "formatter": "{value}%"
-    },
-    "data": [8.59, 0, 10.9, 12, 9.27, 20.8, 11.6, 18.1, 16.5]
+    "department": "Office of CEO",
+    "overall": 11,
+    "high_performer": 0
   },
   {
-    "xAxisIndex": 1,
-    "yAxisIndex": 1,
-    "name": "Chart",
-    "type": "bar",
-    "color": "#59d1c8",
-    "label": {
-      "show": true,
-      "position": "outside",
-      "color": "#59d1c8",
-      "formatter": ""
-    },
-    "emphasis": {
-      "focus": "series"
-    },
-    "data": [0.7, 11.0, 1.0, 0.3, 3.2, -7.9, 2.0, -2.8, 0.1]
+    "department": "Marketing",
+    "overall": 11.9,
+    "high_performer": 10.9
+  },
+  {
+    "department": "Customer Support",
+    "overall": 12.3,
+    "high_performer": 12
+  },
+  {
+    "department": "Finance",
+    "overall": 12.5,
+    "high_performer": 9.27
+  },
+  {
+    "department": "HR",
+    "overall": 12.9,
+    "high_performer": 20.8
+  },
+  {
+    "department": "IT",
+    "overall": 13.7,
+    "high_performer": 11.6
+  },
+  {
+    "department": "Sales",
+    "overall": 15.3,
+    "high_performer": 18.1
+  },
+  {
+    "department": "Operations",
+    "overall": 16.6,
+    "high_performer": 16.5
   }
 ]
