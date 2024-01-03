@@ -21,6 +21,23 @@
       "color": "#ff9179",
       "formatter": "{value}%"
     },
-    "data": [8.59, 0, 10.9, 12, 9.27, 20.8, 11.6, 18.1, 16.6]
+    "data": [8.59, 0, 10.9, 12, 9.27, 20.8, 11.6, 18.1, 16.5]
+  },
+  {
+    "xAxisIndex": 1,
+    "yAxisIndex": 1,
+    "name": "Chart",
+    "type": "bar",
+    "color": "#59d1c8",
+    "label": {
+      "show": true,
+      "position": "outside",
+      "color": "#59d1c8",
+      "formatter": ""
+    },
+    "emphasis": {
+      "focus": "series"
+    },
+    "data": [0.7, 11.0, 1.0, 0.3, 3.2, -7.9, 2.0, -2.8, 0.1]
   }
 ]

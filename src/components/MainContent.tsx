@@ -1,6 +1,6 @@
 import "../styles/mainContent.css";
 import Header from "./Header";
-import EmployeePerformanceCharts from "./EmployeePerformanceCharts";
+import ComparingResignation from "./Charts/ComparingResignation";
 
 const MainContent = () => {
   const ButtonContainer = () => {
@@ -17,7 +17,7 @@ const MainContent = () => {
     <div className="container">
       <Header />
       <ButtonContainer />
-      <EmployeePerformanceCharts />
+      <ComparingResignation />
     </div>
   );
 };
