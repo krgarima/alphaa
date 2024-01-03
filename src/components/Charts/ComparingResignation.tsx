@@ -4,7 +4,7 @@ import comparisonChartData from "../Charts/data/comparisonChartData.json";
 const Chart = () => {
   const formatValues = (obj: { value: number }, name: string) => {
     if (name === "Overall" || name === "High Performer") return `${obj.value}%`;
-    else if (name === "Difference")
+    else if (name === "Chart")
       return `${obj.value > 0 ? "+" : ""}${obj.value.toFixed(2)} pp`;
     else return "";
   };
