@@ -75,6 +75,17 @@ const Chart = () => {
         axisTick: {
           show: false,
         },
+        data: [
+          "Product",
+          "Office of CEO",
+          "Marketing",
+          "Customer Support",
+          "Finance",
+          "HR",
+          "IT",
+          "Sales",
+          "Operations",
+        ],
       },
     ],
     series: [
@@ -105,7 +116,7 @@ const Chart = () => {
       {
         xAxisIndex: 1,
         yAxisIndex: 1,
-        name: "Chart",
+        name: "Difference",
         type: "bar",
         itemStyle: {
           color: (obj: { value: number }) =>
